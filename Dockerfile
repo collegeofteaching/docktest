@@ -12,8 +12,7 @@ RUN apt-get update && \
 RUN apt-get install -yqq python2.7 python-pip python-dev vim python-virtualenv
 
 # Install PhantomJS
-# We do this from source because of https://github.com/ariya/phantomjs/issues/14376
-
+RUN apt-get install -yqq phantomjs
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN bzip2 -d phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN tar -xvf phantomjs-2.1.1-linux-x86_64.tar
